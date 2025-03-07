@@ -9,7 +9,6 @@ function calculationIMC (){
         return;
     }
 
-    
     let situation =''
 
     if (calculator < 18.5) {

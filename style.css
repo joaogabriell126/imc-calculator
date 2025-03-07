@@ -26,7 +26,7 @@ main{
     border-radius: 10px;
 }
 
-/* Formulário da Calculadora*/
+/* Formulário da Calculadora */
 
 .calculator{
     display: flex;
@@ -68,7 +68,7 @@ main{
     font-size: 14px;
 }
 
-/*Tabela de Resultados*/
+/* Tabela de Resultados */
 .resultTable{
     border-collapse: collapse;
     color: #ECDFCC;
@@ -81,8 +81,40 @@ main{
     text-align: center;
     font-weight: 600;
 }
+.resultTable th, .resultTable td {
+    width: 10%;
+}
 
-/*Responsividade para Tablets*/
+/* Tabela de Classficação Geral */
+.classificationTable{
+    border-collapse: collapse;
+    width: 32.5vw;
+}
+
+.classificationTable th{
+    color: #99a794;
+    background-color: #69756569;
+    text-align: start;
+    font-weight: 700;
+}
+.classificationTable th, .classificationTable td{
+    padding: 1px 5px;
+}
+
+.classificationTable td{
+    color: #ECDFCC;
+}
+
+.classificationTable tbody tr:nth-child(even) {
+    background-color: #69756569;
+}
+
+.classificationTable tbody tr:nth-child(odd) {
+    background-color: #83927e88;
+}
+
+
+/* Responsividade para Tablets */
 @media (min-width:551px) and (max-width: 750px) {
     main{
         height: 100vh;
@@ -97,7 +129,7 @@ main{
 
 }
 
-/*Responsividade para Celulares*/
+/* Responsividade para Celulares */
 @media (max-width: 550px) {
     main{
         height: 100vh;
