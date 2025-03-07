@@ -22,9 +22,26 @@ function calculationIMC (){
     } else {
         situation = "Obesidade Grave";
     }
-
+    
    document.getElementById('weightTab').innerText= weightValue;
    document.getElementById('heightTab').innerText = heightValue;
    document.getElementById('resultTab').innerText = calculator.toFixed(2);
    document.getElementById('situationTab').innerText = situation;
+
+   document.getElementById('submit').innerText = "Refazer"
+   document.getElementById('submit').setAttribute("onclick", "refazer()");
+}
+
+function refazer(){
+
+    document.getElementById('weightInput').value = '';
+    document.getElementById('heightInput').value = '';
+
+    document.getElementById('weightTab').innerText = '';
+    document.getElementById('heightTab').innerText = '';
+    document.getElementById('resultTab').innerText = '';
+    document.getElementById('situationTab').innerText = '';
+
+    document.getElementById('submit').innerText = "Resultado"
+    document.getElementById('submit').setAttribute("onclick", "calculationIMC()");
 }
