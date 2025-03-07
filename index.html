@@ -1,26 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Calculadora IMC</title>
 </head>
+
 <body>
-    <div class="inputBox">
-        <label for="weight">Weight</label>
-        <input type="text" name="weight" id="weight">
-    </div>
-    <div class="inputBox">
-        <label for="hight">Hight</label>
-        <input type="text" name="height" id="height">
-    </div>
-    <div class="inputBox">
-        <label for="result">Result</label>
-        <input type="text" name="result" id="result">
-    </div>
-    <button id="submit" onclick="IMC()">Submit</button>
-    <p id="situation"></p>
+    <main class="mainCalculator">
+        <form class="calculator">
+            <div class="inputBox">
+                <div class="inputForm">
+                    <label for="weight">Peso</label>
+                    <input type="text" name="weight" id="weightInput" placeholder="Digite o seu peso em KG">
+                </div>
+                <div class="inputForm">
+                    <label for="height">Altura</label>
+                    <input type="text" name="height" id="heightInput" placeholder="Digite a sua altura em CM">
+                </div>
+            </div>
+            <button type="button" id="submit" onclick="calculationIMC()">Resultado</button>
+        </form>
+        <table class="resultTable">
+            <thead>
+                <tr>
+                    <th>Peso</th>
+                    <th>Altura</th>
+                    <th>IMC</th>
+                    <th>Resultado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <td id="weightTab"></td>
+                <td id="heightTab"></td>
+                <td id="resultTab"></td>
+                <td id="situationTab"></th>
+            </tbody>
+        </table>
+
+        <table class="classificationTable">
+            <thead>
+                <tr>
+                    <th>IMC</th>
+                    <th>Classificação</th>
+                </tr>
+                <tr>
+                    <td>Menos de 17</td>
+                    <td>Muito abaixo do peso</td>
+                </tr>
+                <tr>
+                    <td>Entre 17 e 18,49</td>
+                    <td>Abaixo do peso</td>
+                </tr>
+                <tr>
+                    <td>Entre 18,5 e 24,99</td>
+                    <td>Peso normal</td>
+                </tr>
+                <tr>
+                    <td>Entre 25 e 29,99</td>
+                    <td>Acima do peso</td>
+                </tr>
+                <tr>
+                    <td>Entre 30 e 34,99</td>
+                    <td>Obesidade I</td>
+                </tr>
+                <tr>
+                    <td>Entre 35 e 39,99</td>
+                    <td>Obesidade II (severa)</td>
+                </tr>
+                <tr>
+                    <td>Acima de 40</td>
+                    <td>Obesidade III (mórbida)</td>
+                </tr>
+            </thead>
+        </table>
+    </main>
     <script src="script.js"></script>
 </body>
+
 </html>

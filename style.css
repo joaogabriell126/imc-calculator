@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    height: 100vh;
+    background-color: #0D0D0D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    background-color: #3C3D37;
+    height: 90vh;
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+/* Formulário da Calculadora*/
+
+.calculator{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 33vh;
+    width: 32.5vw;
+}
+
+.inputBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 23.5vh;
+    width: 100%;
+    color: #ECDFCC;
+}
+
+.inputForm{
+    display: flex;
+    flex-direction: column;
+}
+
+.inputForm input{
+    height: 45px;
+    border: 1px solid #697565;
+    border-radius: 5px;
+    margin-top: 3px;
+    padding: 13px 15px;
+}
+
+#submit{
+    height: 45px;
+    background-color: #697565;
+    color: #ECDFCC;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/*Tabela de Resultados*/
+.resultTable{
+    border-collapse: collapse;
+    color: #ECDFCC;
+    width: 32.5vw;
+    text-align: center;
+}
+
+.resultTable th{
+    border-bottom: 1px solid #697565;
+    text-align: center;
+    font-weight: 600;
+}
+
+/*Responsividade para Tablets*/
+@media (min-width:551px) and (max-width: 750px) {
+    main{
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .calculator{
+        height: 30vh;
+        width: 50vw;
+    }
+
+
+}
+
+/*Responsividade para Celulares*/
+@media (max-width: 550px) {
+    main{
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .calculator{
+        height: 30vh;
+        width: 65vw;
+    }
+}

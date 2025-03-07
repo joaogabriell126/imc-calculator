@@ -1,11 +1,15 @@
-function IMC (){
-    let weight = document.getElementById('weight').value;
-    let height = document.getElementById('height').value/100;
+function calculationIMC (){
+    let weightValue = document.getElementById('weightInput').value;
+    let heightValue = document.getElementById('heightInput').value/100;
     
-    let calculator = weight / (height * height);
-    
-   document.getElementById('result').value = calculator.toFixed(2);
+    let calculator = weightValue / (heightValue * heightValue);
 
+    if ( weightValue <= 0 || heightValue <= 0) {
+        alert("Por favor, preencha ambos os campos com valores válidos!");
+        return;
+    }
+
+    
     let situation =''
 
     if (calculator < 18.5) {
@@ -20,5 +24,8 @@ function IMC (){
         situation = "Obesidade Grave";
     }
 
-    document.getElementById("situation").innerText = `Situação: ${situation}`;
+   document.getElementById('weightTab').innerText= weightValue;
+   document.getElementById('heightTab').innerText = heightValue;
+   document.getElementById('resultTab').innerText = calculator.toFixed(2);
+   document.getElementById('situationTab').innerText = situation;
 }
