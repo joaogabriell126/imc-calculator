@@ -1,3 +1,9 @@
+function main (){
+    document.getElementById("submit").addEventListener('click', calculationIMC);
+}
+
+addEventListener('load', main);
+
 function calculationIMC (){
     let weightValue = document.getElementById('weightInput').value;
     let heightValue = document.getElementById('heightInput').value/100;
@@ -29,7 +35,7 @@ function calculationIMC (){
    document.getElementById('situationTab').innerText = situation;
 
    document.getElementById('submit').innerText = "Refazer"
-   document.getElementById('submit').setAttribute("onclick", "refazer()");
+   document.getElementById("submit").addEventListener('click', refazer)
 }
 
 function refazer(){
@@ -43,5 +49,5 @@ function refazer(){
     document.getElementById('situationTab').innerText = '';
 
     document.getElementById('submit').innerText = "Resultado"
-    document.getElementById('submit').setAttribute("onclick", "calculationIMC()");
+    document.getElementById("submit").addEventListener('click', calculationIMC);
 }
